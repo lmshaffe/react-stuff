@@ -6,7 +6,8 @@ module.exports = {
   },
   resolve: {
     root: __dirname,
-    alias: {},
+    alias: {
+    },
     extensions: ['', '.js', '.jsx']
   },
   module: {
@@ -21,4 +22,4 @@ module.exports = {
       }
     ]
   }
-}
+};

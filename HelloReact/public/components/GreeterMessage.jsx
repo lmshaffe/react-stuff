@@ -1,7 +1,7 @@
-var React = require('react')
+var React = require('react');
 
 var GreeterMessage = React.createClass({
-  render: function() {
+  render: function () {
     var name = this.props.name;
     var message = this.props.message;
     return (
@@ -9,8 +9,8 @@ var GreeterMessage = React.createClass({
         <h1>Hello {name}!</h1>
         <p>{message}</p>
       </div>
-    );
+    )
   }
-})
+});
 
 module.exports = GreeterMessage;

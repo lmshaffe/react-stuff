@@ -1,15 +1,15 @@
-var React = require('react')
+var React = require('react');
 
 var GreeterForm = React.createClass({
   onFormSubmit: function (e) {
+    // prevents the form from submitting
     e.preventDefault();
 
     var updates = {};
-
     var name = this.refs.name.value;
-    var message = this.refs.message.value;
+    var message = this.refs.message.value
 
-    if (name.length > 0) {
+    if (name.length > 0 ) {
       this.refs.name.value = '';
       updates.name = name;
     }
@@ -17,26 +17,18 @@ var GreeterForm = React.createClass({
       this.refs.message.value = '';
       updates.message = message;
     }
-
     this.props.onNewData(updates);
   },
-  render: function() {
+
+  render: function () {
     return (
-      <div>
-        <form onSubmit={this.onFormSubmit}>
-          <div>
-            <input type="text" ref="name" placeholder="Enter name"/>
-          </div>
-          <div>
-            <textarea ref="message" placeholder="Enter message"></textarea>
-          </div>
-          <div>
-            <button>Submit</button>
-          </div>
-        </form>
-      </div>
-    );
+      <form onSubmit={this.onFormSubmit}>
+        <div><input type='text' ref ='name' placeholder='Enter name'/></div>
+        <div><textarea ref='message' placeholder='Enter message'></textarea></div>
+        <div><button>Submit</button></div>
+      </form>
+    )
   }
-})
+});
 
 module.exports = GreeterForm;
