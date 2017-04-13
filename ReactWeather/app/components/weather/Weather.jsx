@@ -10,8 +10,10 @@ var Weather = React.createClass({
     }
   },
   handleSearch: function(location) {
+
     this.setState({isLoading: true});
     openWeatherMap.getTemp(location).then((temp) => {
+      // this wouldn't work if we didn't use an arrow function
       this.setState({
         location: location,
         temp: temp,
